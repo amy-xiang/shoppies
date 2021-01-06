@@ -16,6 +16,7 @@ const SearchBar = props => {
       <img src={SearchIcon} alt="SearchIcon" id="SearchIcon" />
       <form onSubmit={handleSubmit} id="SearchForm">
         <input
+          id="SearchInput"
           type="text"
           key="search"
           placeholder="Movie Search"

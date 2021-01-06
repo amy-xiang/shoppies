@@ -26,6 +26,9 @@ class App extends Component {
   render() {
     return (
       <div id="App">
+        <h1 id="shoppies" className="title">
+          Shoppies
+        </h1>
         <SearchBar onSubmit={this.fetchData} />
       </div>
     );
