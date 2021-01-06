@@ -1,0 +1,39 @@
+#SearchBarContainer {
+  width: 60%;
+  min-width: 275px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#SearchIcon {
+  width: 5%;
+  height: 5%;
+  min-width: 30px;
+  min-height: 30px;
+  max-width: 50px;
+  max-height: 50px;
+  margin-right: 2%;
+}
+
+#SearchForm {
+  width: 85%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#SearchInput {
+  width: 100%;
+  height: 100%;
+  font-size: large;
+  padding-left: 10px;
+  border: 5px solid transparent;
+  border-radius: 20px;
+  box-shadow: 0 0 0 1px #6b7177;
+  outline: none;
+}
+
+#SearchInput:focus {
+  box-shadow: 0 0 4px 4px #6b7177;
+}
