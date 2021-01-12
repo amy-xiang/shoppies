@@ -13,7 +13,7 @@
   min-height: 30px;
   max-width: 50px;
   max-height: 50px;
-  margin-right: 2%;
+  margin-right: 1%;
 }
 
 #SearchForm {
@@ -31,9 +31,15 @@
   border: 5px solid transparent;
   border-radius: 20px;
   box-shadow: 0 0 0 1px #6b7177;
+  transition: 0.3s;
   outline: none;
+  background-color: white;
 }
 
 #SearchInput:focus {
+  box-shadow: 0 0 4px 4px #6b7177;
+}
+
+#SearchInput:hover {
   box-shadow: 0 0 4px 4px #6b7177;
 }
