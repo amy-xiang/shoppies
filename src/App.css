@@ -5,12 +5,55 @@
   flex-direction: column;
   width: 100%;
   height: 100vh;
-  margin-bottom: -2vh;
 }
 
-.title {
+.Title {
   font-size: 4em;
   color: white;
   font-style: italic;
   margin: 2%;
+}
+
+.Card {
+  max-height: 100%;
+  box-shadow: 0 4px 8px 0 #6b7177;
+  transition: 0.3s;
+  border-radius: 5px; /* 5px rounded corners */
+  background-color: white;
+  overflow: auto;
+}
+
+.Card:hover {
+  box-shadow: 0 0 16px 4px #6b7177;
+}
+
+.ErrorMessage {
+  padding: 1em;
+  text-align: center;
+}
+
+.FlexGrid {
+  display: flex;
+  justify-content: space-between;
+  width: 55%;
+  max-height: 50%;
+  margin-top: 1em;
+}
+
+.FlexGrid .Col {
+  width: 49%;
+}
+
+@media (max-width: 400px) {
+  .FlexGrid {
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+  }
+
+  .FlexGrid .Col {
+    width: 100%;
+    margin-top: 1em;
+    overflow: auto;
+  }
 }
