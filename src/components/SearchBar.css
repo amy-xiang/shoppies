@@ -33,7 +33,7 @@
   box-shadow: 0 0 0 1px #6b7177;
   transition: 0.3s;
   outline: none;
-  background-color: white;
+  background-color: white !important;
 }
 
 #SearchInput:focus {
@@ -42,4 +42,10 @@
 
 #SearchInput:hover {
   box-shadow: 0 0 4px 4px #6b7177;
+}
+
+@media (max-width: 600px) {
+  #SearchBarContainer {
+    width: 90%;
+  }
 }
