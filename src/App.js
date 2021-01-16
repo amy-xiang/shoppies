@@ -57,7 +57,9 @@ const App = () => {
           </div>
         </div>
         <div id="Nominations" className="Col">
-          <div className="Card">placeholder</div>
+          <div className="Card">
+            <MovieList movies={[...context.movieNominations.values()]} />
+          </div>
         </div>
       </div>
     </div>
