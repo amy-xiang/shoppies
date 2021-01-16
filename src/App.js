@@ -1,9 +1,11 @@
 import React, { useState, useContext } from "react";
 import AnimateHeight from "react-animate-height";
+import { ReactComponent as Nominate } from "./assets/trophy.svg";
 import "./App.css";
 import { MoviesContext } from "./MoviesContext";
 import SearchBar from "./components/SearchBar";
 import MovieList from "./components/MovieList";
+import Modal from "./components/Modal";
 
 const App = () => {
   const [height, setHeight] = useState(0);
@@ -34,9 +36,20 @@ const App = () => {
 
   return (
     <div id="App">
+      <Modal
+        show={context.openModal}
+        message={context.modalMessage}
+        onClose={() => {
+          context.setOpenModal(false);
+        }}
+      />
       <h1 id="shoppies" className="Title">
         The Shoppies
       </h1>
+      <p className="Description">
+        Nominate a movie by pressing the &nbsp;
+        <Nominate className="StaticNominateIcon" />
+      </p>
       <SearchBar onSubmit={fetchData} />
       <div id="CardsContainer" className="FlexGrid">
         <div id="MovieResults" className="Col">
