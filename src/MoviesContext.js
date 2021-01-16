@@ -7,7 +7,8 @@ export const MoviesContext = createContext();
 const MoviesContextProvider = (props) => {
   const [results, updateResults] = useState([]);
   const [nominations, updateNominations] = useState(new Map());
-  const [modal, setModal] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
+  const [modalMessage, setModalMessage] = useState();
 
   const movies = {
     searchResults: results,
@@ -30,9 +31,13 @@ const MoviesContextProvider = (props) => {
     updateMovieNominations: (movieNominations) => {
       updateNominations(movieNominations);
     },
-    modal: modal,
-    setModal: (value) => {
-      setModal(value);
+    openModal: openModal,
+    setOpenModal: (value) => {
+      setOpenModal(value);
+    },
+    modalMessage: modalMessage,
+    setModalMessage: (message) => {
+      setModalMessage(message);
     },
   };
 

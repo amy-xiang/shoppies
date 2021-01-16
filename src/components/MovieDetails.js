@@ -2,13 +2,17 @@ import React, { useState, useContext } from "react";
 import "./MovieDetails.css";
 import { ReactComponent as Nominate } from "../assets/trophy.svg";
 import { MoviesContext } from "../MoviesContext";
+import Modal from "./Modal";
 
 const MovieDetails = ({ imdbID, title, year, nominated }) => {
   const context = useContext(MoviesContext);
 
   const handleClick = () => {
     if (nominated === 0 && context.movieNominations.size >= 5) {
-      context.setModal(true);
+      context.setModalMessage(
+        "Nominations complete! Only 5 nominations are allowed."
+      );
+      context.setOpenModal(true);
     } else if (nominated === 1 && context.movieNominations.has(imdbID)) {
       context.movieNominations.delete(imdbID);
       context.updateSearchResults(context.searchResults);
@@ -20,6 +24,11 @@ const MovieDetails = ({ imdbID, title, year, nominated }) => {
         Nominated: 1,
       });
       context.updateSearchResults(context.searchResults);
+
+      if (context.movieNominations.size === 5) {
+        context.setModalMessage("Nominations complete!");
+        context.setOpenModal(true);
+      }
     }
   };
 
