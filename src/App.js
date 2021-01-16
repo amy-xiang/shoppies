@@ -14,7 +14,7 @@ const App = () => {
     if (term) {
       setHeight(0);
       return await fetch(
-        `http://www.omdbapi.com/?s=${term}&type=movie&apikey=22c53a9c`
+        `https://www.omdbapi.com/?s=${term}&type=movie&apikey=22c53a9c`
       )
         .then((response) => response.json())
         .then((data) => {
