@@ -47,8 +47,9 @@ const App = () => {
         The Shoppies
       </h1>
       <p className="Description">
-        Nominate a movie by pressing the &nbsp;
+        Click the &nbsp;
         <Nominate className="StaticNominateIcon" />
+        &nbsp; to nominate/un-nominate a movie.
       </p>
       <SearchBar onSubmit={fetchData} />
       <div id="CardsContainer" className="FlexGrid">
